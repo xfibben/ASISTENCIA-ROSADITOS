@@ -18,10 +18,10 @@ $.post("../ajax/usuario.php?op=permisos&id=", function(r){
 	$("#permisos").html(r);
 });
 
-   //cargamos los items al select departamento
-   $.post("../ajax/departamento.php?op=selectDepartamento", function(r){
-   	$("#iddepartamento").html(r);
-   	$('#iddepartamento').selectpicker('refresh'); 
+   //cargamos los items al select oficina
+   $.post("../ajax/oficina.php?op=selectoficina", function(r){
+   	$("#idoficina").html(r);
+   	$('#idoficina').selectpicker('refresh'); 
    });
 
    //cargamos los items al select tipousuario
@@ -37,7 +37,7 @@ function limpiar(){
 	$("#nombre").val("");
     $("#apellidos").val("");
 	$("#direccion").val("");
-	$("#iddepartamento").selectpicker('refresh');
+	$("#idoficina").selectpicker('refresh');
 	$("#idtipousuario").selectpicker('refresh');
 	$("#email").val("");
 	$("#login").val("");
@@ -170,8 +170,8 @@ function mostrar(idusuario){
 			$("#claves").hide();
 			}
 			$("#nombre").val(data.nombre);
-            $("#iddepartamento").val(data.iddepartamento);
-            $("#iddepartamento").selectpicker('refresh');
+            $("#idoficina").val(data.idoficina);
+            $("#idoficina").selectpicker('refresh');
             $("#idtipousuario").val(data.idtipousuario);
             $("#idtipousuario").selectpicker('refresh');
             $("#apellidos").val(data.apellidos);

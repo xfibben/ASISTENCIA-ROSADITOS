@@ -10,7 +10,7 @@ $idusuario=isset($_POST["idusuario"])? limpiarCadena($_POST["idusuario"]):"";
 $nombre=isset($_POST["nombre"])? limpiarCadena($_POST["nombre"]):"";
 $apellidos=isset($_POST["apellidos"])? limpiarCadena($_POST["apellidos"]):"";
 $login=isset($_POST["login"])? limpiarCadena($_POST["login"]):"";
-$iddepartamento=isset($_POST["iddepartamento"])? limpiarCadena($_POST["iddepartamento"]):"";
+$idoficina=isset($_POST["idoficina"])? limpiarCadena($_POST["idoficina"]):"";
 $idtipousuario=isset($_POST["idtipousuario"])? limpiarCadena($_POST["idtipousuario"]):"";
 $email=isset($_POST["email"])? limpiarCadena($_POST["email"]):"";
 $codigo_persona=isset($_POST["codigo_persona"])? limpiarCadena($_POST["codigo_persona"]):"";
@@ -43,11 +43,11 @@ switch ($_GET["op"]) {
 
 		if (empty($idusuario)) {
 			$idusuario=$_SESSION["idusuario"];
-			$rspta=$usuario->insertar($nombre,$apellidos,$login,$iddepartamento,$idtipousuario,$email,$clavehash,$imagen,$usuariocreado,$codigo_persona);
+			$rspta=$usuario->insertar($nombre,$apellidos,$login,$idoficina,$idtipousuario,$email,$clavehash,$imagen,$usuariocreado,$codigo_persona);
 			echo $rspta ? "Datos registrados correctamente" : "No se pudo registrar todos los datos del usuario";
 		}
 		else {
-			$rspta=$usuario->editar($idusuario,$nombre,$apellidos,$login,$iddepartamento,$idtipousuario,$email,$imagen,$usuariocreado,$codigo_persona);
+			$rspta=$usuario->editar($idusuario,$nombre,$apellidos,$login,$idoficina,$idtipousuario,$email,$imagen,$usuariocreado,$codigo_persona);
 			echo $rspta ? "Datos actualizados correctamente" : "No se pudo actualizar los datos";
 		}
 	break;
@@ -131,7 +131,7 @@ switch ($_GET["op"]) {
 			$_SESSION['imagen']=$fetch->imagen;
 			$_SESSION['login']=$fetch->login;
 			$_SESSION['tipousuario']=$fetch->tipousuario;
-			$_SESSION['departamento']=$fetch->iddepartamento;
+			$_SESSION['oficina']=$fetch->idoficina;
 
 			require "../config/Conexion.php";
 

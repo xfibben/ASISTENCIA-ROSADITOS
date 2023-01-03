@@ -162,7 +162,7 @@ require 'header.php';
 
 require 'footer.php';
  ?>
- <script src="scripts/departamento.js"></script>
+ <script src="scripts/oficina.js"></script>
  <?php 
 }
 

@@ -4,7 +4,7 @@ require_once "../modelos/Asistencia.php";
 $asistencia=new Asistencia();
 
 $codigo_persona=isset($_POST["codigo_persona"])? limpiarCadena($_POST["codigo_persona"]):"";
-$iddepartamento=isset($_POST["iddepartamento"])? limpiarCadena($_POST["iddepartamento"]):"";
+$idoficina=isset($_POST["idoficina"])? limpiarCadena($_POST["idoficina"]):"";
 
 
 

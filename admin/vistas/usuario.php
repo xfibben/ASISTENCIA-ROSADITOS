@@ -59,8 +59,8 @@ require 'header.php';
      </select>
     </div>
     <div class="form-group col-lg-6 col-md-6 col-xs-12">
-      <label for="">Departamento(*):</label>
-     <select name="iddepartamento" id="iddepartamento" class="form-control select-picker" required>
+      <label for="">Oficina(*):</label>
+     <select name="idoficina" id="idoficina" class="form-control select-picker" required>
       
      </select>
     </div>

@@ -104,28 +104,28 @@ case 'flujoDetalle':
 
        </thead>';
 
-       require_once "../modelos/Departamento.php";
-        $departamentos=new Departamento(); 
+       require_once "../modelos/oficina.php";
+        $oficinas=new Oficina(); 
 
 		while ($reg=$rspta->fetch_assoc()) {			
 		$status='';
-		$rsdepartamento = $departamentos->regresaRolDepartamento($_SESSION['departamento'] );
-	    $rgdepartamento=$rsdepartamento->fetch_object();        	        
+		$rsoficina = $oficinas->regresaRoloficina($_SESSION['oficina'] );
+	    $rgoficina=$rsoficina->fetch_object();        	        
 
  
 
 
-			if($reg['estado']=='Pendiente' && ($rgdepartamento->nombre=='EMBARQUES' || $rgdepartamento->nombre=='ADMIN' ) ) {
+			if($reg['estado']=='Pendiente' && ($rgoficina->nombre=='EMBARQUES' || $rgoficina->nombre=='ADMIN' ) ) {
 				$status='<button class="btn btn-warning btn-xs" onclick="cambioestadodetalle(1,'.$id.','.$reg['iddetalle_solicitud'].')"><i class="fa fa-exclamation-triangle"></i> Pendiente de Enviar</button>';
 				
 			}
 			else{
-				if($reg['estado']=='Enviado' && ( $rgdepartamento->nombre=='RECIBO' || $rgdepartamento->nombre=='ADMIN' ) ) {
+				if($reg['estado']=='Enviado' && ( $rgoficina->nombre=='RECIBO' || $rgoficina->nombre=='ADMIN' ) ) {
 					$status='<button class="btn btn-primary btn-xs" onclick="cambioestadodetalle(2,'.$id.','.$reg['iddetalle_solicitud'].')"><i class="fa fa-check"></i> Enviado(En transito a planta Valeo)</button>';
 				
 				}
 				else{
-					if($reg['estado']=='Recibido' && ( $rgdepartamento->nombre=='HABILITACION'  || $rgdepartamento->nombre=='ADMIN' ) ) {
+					if($reg['estado']=='Recibido' && ( $rgoficina->nombre=='HABILITACION'  || $rgoficina->nombre=='ADMIN' ) ) {
 						$status='<button class="btn btn-danger btn-xs" onclick="cambioestadodetalle(3,'.$id.','.$reg['iddetalle_solicitud'].')"><i class="fa fa-check"></i> Pendiente enviar a Linea</button>';
 				
 					}
@@ -147,7 +147,7 @@ case 'flujoDetalle':
 
 
 
-		/*if ($reg['estado']=='Pendiente' && $rgdepartamento->nombre=='HABILITACION'  ) {
+		/*if ($reg['estado']=='Pendiente' && $rgoficina->nombre=='HABILITACION'  ) {
 
 						$status='<button class="btn btn-warning btn-xs" onclick="cambioestadodetalle(1,'.$id.','.$reg['iddetalle_solicitud'].')"><i class="fa fa-exclamation-triangle"></i> Pendiente de Enviar</button>'; 
 
@@ -192,28 +192,28 @@ case 'flujoDetalle':
 
 		$data=Array();
 
-		require_once "../modelos/Departamento.php";
-        $departamentos=new Departamento(); 
+		require_once "../modelos/oficina.php";
+        $oficinas=new oficina(); 
         
 		while ($reg=$rspta->fetch_object()) { 
 
 
 //			($reg->estado=='Pendiente de Enviar')?'<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->idsolicitud.')"><i class="fa fa-eye"></i></button>' : '<button class="btn btn-success btn-xs" onclick="mostrar('.$reg->idsolicitud.')"><i class="fa fa-eye"></i></button>',
 
-			$rsdepartamento = $departamentos->regresaRolDepartamento($_SESSION['departamento'] );
-	        $rgdepartamento=$rsdepartamento->fetch_object();        	        
+			$rsoficina = $oficinas->regresaRoloficina($_SESSION['oficina'] );
+	        $rgoficina=$rsoficina->fetch_object();        	        
 
-/*			if($reg->estado=='Pendiente' && $rgdepartamento->nombre=='EMBARQUES'){				
+/*			if($reg->estado=='Pendiente' && $rgoficina->nombre=='EMBARQUES'){				
 				$estado='<button class="btn btn-warning btn-xs" onclick="cambioestado(1,'.$reg->idsolicitud.')"><i class="fa fa-exclamation-triangle"></i> Pendiente de Enviar</button>';
 				$view='<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->idsolicitud.')"><i class="fa fa-eye"></i></button>';
 			}
 			else{
-				if($reg->estado=='Enviado' && $rgdepartamento->nombre=='RECIBO' ){
+				if($reg->estado=='Enviado' && $rgoficina->nombre=='RECIBO' ){
 					$estado='<button class="btn btn-primary btn-xs" onclick="cambioestado(2,'.$reg->idsolicitud.')"><i class="fa fa-check"></i> Enviado(En transito a planta Valeo)</button>';
 					$view='<button class="btn btn-primary btn-xs" onclick="mostrar('.$reg->idsolicitud.')"><i class="fa fa-eye"></i></button>';
 				}
 				else{
-					if($reg->estado=='Recibido' && $rgdepartamento->nombre=='HABILITACION' ){
+					if($reg->estado=='Recibido' && $rgoficina->nombre=='HABILITACION' ){
 						$estado='<button class="btn btn-danger btn-xs" ><i class="fa fa-check"></i> Pendiente enviar a Linea</button>';
 						$view='<button class="btn btn-danger btn-xs" onclick="mostrar('.$reg->idsolicitud.')"><i class="fa fa-eye"></i></button>';
 					}

@@ -74,7 +74,7 @@ if (strlen(session_id())<1)
                 <img src="../files/usuarios/<?php echo $_SESSION['imagen']; ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $_SESSION['nombre'].' '.$_SESSION['departamento']; ?>
+                  <?php echo $_SESSION['nombre'].' '.$_SESSION['oficina']; ?>
                   <small>Desarrollo de sistemas informáticos</small>
                 </p>
               </li>
@@ -140,19 +140,19 @@ if (strlen(session_id())<1)
           <ul class="treeview-menu">
             <li><a href="usuario.php"><i class="fa fa-circle-o"></i> Usuarios</a></li>
             <li><a href="tipousuario.php"><i class="fa fa-circle-o"></i> Tipo Usuario</a></li>
-            <li><a href="departamento.php"><i class="fa fa-circle-o"></i> Departamento</a></li>
+            <li><a href="oficina.php"><i class="fa fa-circle-o"></i> oficina</a></li>
           </ul>
       </li>
 
       <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Departamento</span>
+            <i class="fa fa-folder"></i> <span>oficina</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="departamento.php"><i class="fa fa-circle-o"></i> Departamento</a></li>            
+            <li><a href="oficina.php"><i class="fa fa-circle-o"></i> oficina</a></li>            
           </ul>
       </li>
 

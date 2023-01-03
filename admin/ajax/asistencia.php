@@ -5,7 +5,7 @@ if (strlen(session_id())<1)
 $asistencia=new Asistencia();
 
 $codigo_persona=isset($_POST["codigo_persona"])? limpiarCadena($_POST["codigo_persona"]):"";
-$iddepartamento=isset($_POST["iddepartamento"])? limpiarCadena($_POST["iddepartamento"]):"";
+$idoficina=isset($_POST["idoficina"])? limpiarCadena($_POST["idoficina"]):"";
 
 
 
@@ -61,7 +61,7 @@ switch ($_GET["op"]) {
 				"0"=>'<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>',
 				"1"=>$reg->codigo_persona,
 				"2"=>$reg->nombre,
-				"3"=>$reg->departamento,
+				"3"=>$reg->oficina,
 				"4"=>$reg->fecha_hora,
 				"5"=>$reg->tipo,
 				"6"=>$reg->fecha
@@ -89,7 +89,7 @@ switch ($_GET["op"]) {
 				"0"=>'<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>',
 				"1"=>$reg->codigo_persona,
 				"2"=>$reg->nombre,
-				"3"=>$reg->departamento,
+				"3"=>$reg->oficina,
 				"4"=>$reg->fecha_hora,
 				"5"=>$reg->tipo,
 				"6"=>$reg->fecha
