@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CC | Admin</title>
@@ -21,7 +22,7 @@
 <body class="hold-transition lockscreen">
 
 <!-- Automatic element centering -->
-<div class="lockscreen-wrapper">
+<div class="m-40 mx-auto my-auto text-center grid content-center h-screen">
 <?php 
  //include '../ajax/asistencia.php' ?>
     <div name="movimientos" id="movimientos">
@@ -29,27 +30,26 @@
 
 
 
-  <div class="lockscreen-logo">
-    <a href="#"><b>CC</b> ASISTENCIA</a>
+  <div class=" text-center mx-auto">
+    <img src="http://std.drepuno.gob.pe/images/login_Puno.gif" class=" mx-auto"> </img>
+    <a href="#" class="text-8xl font-bold" >Asistencia rosaditos</a>
   </div>
   <!-- User name -->
-  <div class="lockscreen-name">ASISTENCIA</div>
+  <div class="text-5xl my-10">Ingrese su codigo y presione "Enter" para marca su asistencia.</div>
 
   <!-- START LOCK SCREEN ITEM -->
   <div class="lockscreen-item">
     <!-- lockscreen image -->
-    <div class="lockscreen-image">
-      <img src="../admin/files/negocio/default.jpg" alt="User Image">
-    </div>
+
     <!-- /.lockscreen-image -->
 
     <!-- lockscreen credentials (contains the form) -->
-    <form  action="" class="lockscreen-credentials" name="formulario" id="formulario" method="POST">
-      <div class="input-group">
-        <input type="password" class="form-control" name="codigo_persona" id="codigo_persona" placeholder="ID de asistencia">
+    <form  action="" class="rounded-2xl h-40 grid content-center " name="formulario" id="formulario" method="POST">
+      <div class="input-group flex w-full">
+        <input type="password" class="h-20 2/3 rounded-2xl text-3xl mx-10" name="codigo_persona" id="codigo_persona" placeholder="ID de asistencia">
 
         <div class="input-group-btn">
-          <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-right text-muted"></i></button>
+          <button type="submit" class=" rounded-2xl border-solid-2xl h-20 w-20"> -> </button>
         </div>
       </div>
     </form>
@@ -57,9 +57,7 @@
 
   </div>
   <!-- /.lockscreen-item -->
-  <div class="help-block text-center">
-    Ingresa tu ID de asistencia
-  </div>
+
   <div class="text-center">
 
   </div>

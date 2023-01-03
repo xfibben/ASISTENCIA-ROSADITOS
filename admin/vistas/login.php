@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CC | Admin</title>
@@ -22,7 +23,7 @@
     <?php require '../config/Conexion.php'; ?>
     <div class="login-box">
       <div class="login-logo">
-       <a href="login.php"><b>CC</b> Admin</a>
+       <a href="login.php">Ingresar a tu cuenta</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Ingrese sus datos de Acceso</p>
@@ -32,7 +33,7 @@
             <span class="fa fa-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Password">
+            <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Contraseña">
             <span class="fa fa-key form-control-feedback"></span>
           </div>
           <div class="row">

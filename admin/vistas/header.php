@@ -5,9 +5,10 @@ if (strlen(session_id())<1)
  <!DOCTYPE html>
 <html>
   <head>
+  <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>CC | Admin</title>
+   <title> Admin</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3 -->
@@ -32,26 +33,20 @@ if (strlen(session_id())<1)
   </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
-  <!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
+
+
 
 <!-- Your customer chat code -->
-<div class="fb-customerchat"
-  attribution=setup_tool
-  page_id="280144326139427"
-  theme_color="#0084ff"
-  logged_in_greeting="Hola! deseas compartir algún sistema o descargar ?"
-  logged_out_greeting="Hola! deseas compartir algún sistema o descargar ?">
-</div>
-<div class="wrapper">
 
-  <header class="main-header">
+<div class="wrapper bg-blue-500">
+
+  <header class="main-header ">
     <!-- Logo -->
     <a href="escritorio.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>CC</b> A</span>
+      <span class="logo-mini">DREP</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>CC</b> ADMIN</span>
+      <span class="logo-lg">Modulo admin</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -100,7 +95,7 @@ if (strlen(session_id())<1)
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-<div class="user-panel">
+<div class="user-panel bg-blue-500">
         <div class="pull-left image">
           <img src="../files/usuarios/<?php echo $_SESSION['imagen']; ?>" class="img-circle" style="width: 50px; height: 50px;" alt="User Image">
         </div>
@@ -111,25 +106,12 @@ if (strlen(session_id())<1)
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu tree" data-widget="tree">
-      <li class="header">MENÚ DE NAVEGACIÓN</li>
+      <li class="header">MENU</li>
 
 
-      <li><a href="escritorio.php"><i class="fa  fa-dashboard (alias)"></i> <span>Escritorio</span></a></li>
+      <li><a href="escritorio.php"><i class="fa  fa-dashboard (alias)"></i> <span>Panel principal</span></a></li>
 
-<!--
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-envelope"></i> <span>Mensajes</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="mensaje.php"><i class="fa fa-circle-o"></i> Mensaje</a></li>
-          </ul>
-      </li>
 
--->
 <?php if ($_SESSION['tipousuario']=='Administrador') {
 ?>
       <li class="treeview">
@@ -189,9 +171,7 @@ if (strlen(session_id())<1)
       </li>
 <?php } ?>
   
-      <li><a href="#"><i class="fa fa-question-circle"></i> <span>Ayuda</span><small class="label pull-right bg-yellow">PDF</small></a></li>
-      <li><a href="https://www.compartiendocodigos.net/"><i class="fa  fa-exclamation-circle"></i> <span>Acerca de</span><small class="label pull-right bg-yellow">ComCod</small></a></li>   
-        
+
       </ul>
     </section>
     <!-- /.sidebar -->

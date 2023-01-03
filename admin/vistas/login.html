@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CC | Admin</title>
+    <title>Admin</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -22,17 +23,17 @@
 
     <div class="login-box">
       <div class="login-logo">
-       <a href="login.html"><b>CC</b> Admin</a>
+       <a href="login.html">Iniciar Sesion</a>
       </div><!-- /.login-logo -->
-      <div class="login-box-body">
-        <p class="login-box-msg">Ingrese sus datos de Acceso</p>
+      <div class="login-box-body rounded-2xl shadow-2xl">
+        <p class="login-box-msg">Ingrese sus datos en entrada al sistema DREP</p>
         <form method="post" id="frmAcceso">
           <div class="form-group has-feedback">
             <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario">
             <span class="fa fa-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Password">
+            <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Contraseña">
             <span class="fa fa-key form-control-feedback"></span>
           </div>
           <div class="row">
@@ -40,7 +41,7 @@
               
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat"> Ingresar</button>
+              <button type="submit" class="h-20 w-full rounded-2xl hover:bg-blue-300"> Ingresar</button>
             </div><!-- /.col -->
           </div>
         </form>        

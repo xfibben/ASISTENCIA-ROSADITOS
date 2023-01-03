@@ -1,9 +1,5 @@
   <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 0.1.2
-    </div>
-    <strong>Copyright &copy; 2019-2020 <a target="_blank" href="https://www.compartiendocodigos.net">CompartiendoCódigos</a></strong> Todo los derechos
-    reservados.
+    <h1 class="text-bold text-xl">Sistema Asistencia rosaditos derechos reservados</h1>
   </footer>
 
 <!-- jQuery 3 -->
